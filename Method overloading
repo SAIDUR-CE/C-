@@ -1,0 +1,40 @@
+public class Calculator
+{
+    // Method to add two integers
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    // Overloaded method to add three integers
+    public int Add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    // Overloaded method to add two doubles
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Calculator calculator = new Calculator();
+
+        // Using the first Add method with two integer parameters
+        int result1 = calculator.Add(5, 3);
+        Console.WriteLine($"Result of adding two integers: {result1}"); // Outputs: 8
+
+        // Using the overloaded Add method with three integer parameters
+        int result2 = calculator.Add(5, 3, 2);
+        Console.WriteLine($"Result of adding three integers: {result2}"); // Outputs: 10
+
+        // Using the overloaded Add method with two double parameters
+        double result3 = calculator.Add(5.5, 3.2);
+        Console.WriteLine($"Result of adding two doubles: {result3}"); // Outputs: 8.7
+    }
+}
